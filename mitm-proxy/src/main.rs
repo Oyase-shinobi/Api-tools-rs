@@ -41,11 +41,7 @@ async fn main() {
 
     println!("HTTP Proxy is listening on {}:{}", cli.host, cli.port);
 
-    println!();
-    println!("Trust this cert if you want to use HTTPS");
-    println!();
-    println!("{}", root_cert.serialize_pem().unwrap());
-    println!();
+
 
     // Save this cert to ca.crt and use it with curl like this:
     // curl https://www.google.com -x http://127.0.0.1:8088 --cacert ca.crt
